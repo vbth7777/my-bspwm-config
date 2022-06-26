@@ -15,6 +15,9 @@ super + alt + o
 #
 # wm independent hotkeys
 #
+#archlinux-logout
+super + x
+    archlinux-logout
 
 # terminal emulator
 super + Return
@@ -40,10 +43,13 @@ super + y
 # bspwm hotkeys
 #
 
-#archlinux-logout
-super + x
-    archlinux-logout
-
+# Toggle floating
+super + d
+    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
@@ -55,9 +61,6 @@ super + {_,shift + }w
 # alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
-# fullscreen
-super + n
-	bspc node -t ~fullscreen
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -74,6 +77,9 @@ super + g
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# fullscreen
+super + n
+	bspc node -t ~fullscreen
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -146,8 +152,8 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-#super + alt + {h,j,k,l}
-#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # Expand tiled space
 alt + shift + {h,j,k,l}
@@ -160,3 +166,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+# Move floating window
+super + alt + {_,shift + }{Left,Down,Up,Right}
+	~/.config/bspwm/scripts/move-window {_,edge-}{west,south,north,east}
+
