@@ -60,4 +60,3 @@ nitrogen --restore &
 #run spotify &
 #run atom &
 conky-toggle &
-fish &
