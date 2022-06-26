@@ -83,6 +83,14 @@ super + ctrl + {m,x,y,z}
 # focus/swap
 #
 
+#Focus selected desktop
+alt + Tab
+	bspc desktop -f '^{1-9,10}'
+
+#Focus selected desktop
+alt + shift + Tab
+	bspc desktop -f '^{1-9,10}'
+
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
