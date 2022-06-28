@@ -29,7 +29,7 @@ super + x
 
 # terminal emulator
 super + Return
-	urxvt
+	alacritty
 
 # program launcher
 #super + @space
