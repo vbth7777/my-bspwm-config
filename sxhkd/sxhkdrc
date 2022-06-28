@@ -51,13 +51,6 @@ super + y
 # bspwm hotkeys
 #
 
-# Toggle floating
-super + d
-    if [ -z "$(bspc query -N -n focused.floating)" ]; then \
-        bspc node focused -t floating; \
-    else \
-        bspc node focused -t tiled; \
-    fi
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
