@@ -2,15 +2,21 @@
 # general hotkeys
 #
 
+# backlight up
+super + alt + u
+	xbacklight -inc 10
+# backlight down
+super + alt + y
+	xbacklight -dec 10
 # volume up
 super + alt + p
-		amixer set Master 10%+
+	amixer set Master 10%+
 # volume down
 super + alt + i
-		amixer set Master 10%-
+	amixer set Master 10%-
 # volume mute/unmute
 super + alt + o
-		amixer set Master toggle
+	amixer set Master toggle
 
 #
 # wm independent hotkeys
