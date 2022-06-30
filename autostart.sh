@@ -62,4 +62,3 @@ run volumeicon &
 picom --experimental-backends &
 conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh
-bash $HOME/.config/bspwm/scripts/gitPushCommand.sh
