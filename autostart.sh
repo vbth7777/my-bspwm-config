@@ -40,14 +40,14 @@ feh --bg-fill ./wallpaper/blue-theme-wallpaper_012345467.jpg &
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
-conky -c $HOME/.config/bspwm/system-overview &
+#conky -c $HOME/.config/bspwm/system-overview &
 run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
 numlockx on &
 blueberry-tray &
-picom --config $HOME/.config/bspwm/picom/picom.conf &
+#picom --config $HOME/.config/bspwm/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
@@ -62,5 +62,5 @@ run volumeicon &
 #run spotify &
 #run atom &
 picom --experimental-backends &
-conky-toggle &
+#conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh
