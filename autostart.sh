@@ -29,13 +29,13 @@ fi
 
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.config/bspwm/wall.png &
-feh --bg-fill ./wallpaper/blue-theme-wallpaper_012345467.jpg &
+#feh --bg-fill ./wallpaper/blue-theme-wallpaper_012345467.jpg &
 feh --bg-fill ./wallpaper/blue-theme-wallpaper_012345467.jpg &
 #feh --bg-fill /usr/share/backgrounds/archlinux/arch-wallpaper.jpg &
 #feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #wallpaper for other Arch based systems
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
-#feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
+feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
@@ -62,5 +62,6 @@ run volumeicon &
 #run spotify &
 #run atom &
 picom --experimental-backends &
+greenclip daemon &
 #conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh
