@@ -2,6 +2,10 @@
 # general hotkeys
 #
 
+# open clipboard manage by rofi
+super + v
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}';xdotool key shift+Insert
+
 # backlight up
 super + alt + u
 	xbacklight -inc 10
