@@ -63,5 +63,6 @@ run volumeicon &
 #run atom &
 picom --experimental-backends &
 greenclip daemon &
+ibus-daemon &
 #conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh
