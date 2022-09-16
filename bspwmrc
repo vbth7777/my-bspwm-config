@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#LAUNCHERS
-$HOME/.config/bspwm/autostart.sh
 #fix for moving spotify to specific workspace
 #bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command
 #BSPWM configuration
@@ -10,7 +8,8 @@ bspc config border_width         0
 bspc config window_gap           10 
 bspc config top_padding          30
 bspc config bottom_padding       0
-bspc config left_padding         0 bspc config right_padding        0
+bspc config left_padding         0 
+bspc config right_padding        0
 bspc config single_monocle       false
 #bspc config click_to_focus       true
 bspc config split_ratio          0.50
@@ -111,3 +110,6 @@ bspc rule -a Xfce4-settings-manager state=tiled
 #bspc config external_rules_command ~/.config/bspwm/scripts/pseudo_automatic_mode
 ##Adjust new window: splits biggest windows to keep windows about the same size
 #bspc config external_rules_command ~/.config/bspwm/scripts/adjust-new-window
+
+#LAUNCHERS
+$HOME/.config/bspwm/autostart.sh
