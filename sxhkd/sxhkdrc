@@ -33,7 +33,7 @@ ctrl + space
 alt + space
 	rofi -show run
 # show rofi run
-ctrl + super + space
+ctrl + super + alt
 	rofi -show window
 
 #archlinux-logout

@@ -65,4 +65,8 @@ picom --experimental-backends &
 greenclip daemon &
 ibus-daemon &
 #conky-toggle &
-bash $HOME/.config/bspwm/scripts/automaticGitPull.sh
+bash $HOME/.config/bspwm/scripts/automaticGitPull.sh &
+if command -v warp-cli &> /dev/null
+then
+    warp-cli register
+fi
