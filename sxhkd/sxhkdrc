@@ -1,4 +1,11 @@
 #
+# config for polybar
+#
+
+super + alt + l
+    bash $HOME/.config/polybar/cuts/scripts/launcher.sh
+
+#
 # general hotkeys
 #
 
@@ -93,7 +100,7 @@ super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 # fullscreen
 super + n
-	bspc node -t ~fullscreen
+	 bspc node -t ~fullscreen
 
 # set the node flags
 super + ctrl + {m,x,y,z}
