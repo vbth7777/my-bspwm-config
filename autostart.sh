@@ -9,6 +9,8 @@ function run {
 
 #EXPORTS
 export COMMANDLINE_ARGS='--skip-torch-cuda-test'
+export DESKTOP_SESSION=bspwm
+export BROWSER=chrome
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
@@ -64,7 +66,8 @@ run volumeicon &
 #run discord &
 #run spotify &
 #run atom &
-picom --experimental-backends &
+#picom --experimental-backends &
+picom &
 greenclip daemon &
 ibus-daemon &
 #conky-toggle &
