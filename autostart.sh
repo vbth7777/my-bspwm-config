@@ -1,16 +1,23 @@
 #/bin/bash
 
+if command -v warp-cli &> /dev/null
+then
+    warp-cli register
+fi
 function run {
   if ! pgrep $1 ;
   then
     $@&
   fi
 }
+#ALIAS
+alias xclip='xclip -selection clipboard'
 
 #EXPORTS
 export COMMANDLINE_ARGS='--skip-torch-cuda-test'
 export DESKTOP_SESSION=bspwm
-export BROWSER=chrome
+export _JAVA_AWT_WM_NONREPARENTING=1
+#export BROWSER=chrome
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
@@ -69,10 +76,6 @@ run volumeicon &
 #picom --experimental-backends &
 picom &
 greenclip daemon &
-ibus-daemon &
 #conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh &
-if command -v warp-cli &> /dev/null
-then
-    warp-cli register
-fi
+ibus-daemon -rxR
