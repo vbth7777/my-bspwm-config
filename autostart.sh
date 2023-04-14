@@ -2,6 +2,7 @@
 
 if command -v warp-cli &> /dev/null
 then
+    warp-cli delete
     warp-cli register
 fi
 function run {
@@ -10,8 +11,6 @@ function run {
     $@&
   fi
 }
-#ALIAS
-alias xclip='xclip -selection clipboard'
 
 #EXPORTS
 export COMMANDLINE_ARGS='--skip-torch-cuda-test'
@@ -78,4 +77,7 @@ picom &
 greenclip daemon &
 #conky-toggle &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh &
+notify-send "Nhắc nhở" "Hãy điều chỉnh lại max frequency của cpu để tránh bị overheating"
+notify-send "Frequency hiện tại" "Frequency của cpu hiện tại là: \nMin: $(cpupower frequency-info | awk '/current policy/ {printf($7 $8)}')\nMax: $(cpupower frequency-info | awk '/current policy/ {printf($10 $11)}')"
+cpupower-gui &
 ibus-daemon -rxR
