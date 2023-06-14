@@ -1,5 +1,4 @@
 #/bin/bash
-
 if command -v warp-cli &> /dev/null
 then
     warp-cli delete

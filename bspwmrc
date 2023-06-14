@@ -1,5 +1,4 @@
 #!/bin/sh
-
 #fix for moving spotify to specific workspace
 #bspc config external_rules_command ~/.config/bspwm/scripts/external_rules_command
 #BSPWM configuration
@@ -113,4 +112,5 @@ bspc rule -a Xfce4-settings-manager state=tiled
 #bspc config external_rules_command ~/.config/bspwm/scripts/adjust-new-window
 
 #LAUNCHERS
+#mpv /home/gener/Videos/output.mkv --fullscreen --no-on-all-workspaces --no-input-cursor
 $HOME/.config/bspwm/autostart.sh&
