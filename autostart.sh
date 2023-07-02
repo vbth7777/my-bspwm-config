@@ -15,7 +15,7 @@ function run {
 export COMMANDLINE_ARGS='--skip-torch-cuda-test'
 export DESKTOP_SESSION=bspwm
 export _JAVA_AWT_WM_NONREPARENTING=1
-#export BROWSER=chrome
+export BROWSER=google-chrome-beta
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
@@ -78,5 +78,5 @@ greenclip daemon &
 bash $HOME/.config/bspwm/scripts/automaticGitPull.sh &
 notify-send "Nhắc nhở" "Hãy điều chỉnh lại max frequency của cpu để tránh bị overheating"
 notify-send "Frequency hiện tại" "Frequency của cpu hiện tại là: \nMin: $(cpupower frequency-info | awk '/current policy/ {printf($7 $8)}')\nMax: $(cpupower frequency-info | awk '/current policy/ {printf($10 $11)}')"
-cpupower-gui &
+#cpupower-gui &
 ibus-daemon -rxR
