@@ -40,7 +40,7 @@ ctrl + space
 alt + space
 	rofi -show run
 # show rofi run
-ctrl + super + alt
+super + alt + space
 	rofi -show window
 
 #archlinux-logout
@@ -111,12 +111,12 @@ super + ctrl + {m,x,y,z}
 #
 
 #Focus selected desktop
-alt + Tab
-	bspc desktop -f '^{1-9,10}'
-
-#Focus selected desktop
-alt + shift + Tab
-	bspc desktop -f '^{1-9,10}'
+# alt + Tab
+# 	bspc desktop -f '^{1-9,10}'
+#
+# #Focus selected desktop
+# alt + shift + Tab
+# 	bspc desktop -f '^{1-9,10}'
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}

@@ -79,4 +79,5 @@ bash $HOME/.config/bspwm/scripts/automaticGitPull.sh &
 notify-send "Nhắc nhở" "Hãy điều chỉnh lại max frequency của cpu để tránh bị overheating"
 notify-send "Frequency hiện tại" "Frequency của cpu hiện tại là: \nMin: $(cpupower frequency-info | awk '/current policy/ {printf($7 $8)}')\nMax: $(cpupower frequency-info | awk '/current policy/ {printf($10 $11)}')"
 #cpupower-gui &
+xscreensaver --no-splash &
 ibus-daemon -rxR
